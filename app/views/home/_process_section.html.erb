@@ -1,0 +1,159 @@
+<div class = "section-content program-section">
+            <div class = "title program-title">
+                <h1> 
+                    <span class = "title-text-top">Opening Doors.</span>
+                    <span class = "title-text-bottom">Empowering Minds.</span>
+                </h1>
+            </div>
+            <div class = "program-stack">
+                    <div class = "program-stack-item first-step">
+                        <div class = "program-stack-item-image">
+                            <%= image_tag 'backpack-svgrepo-com.svg', alt: 'Free School Supplies', class: 'program-stack-item-image-icon' %>
+                        </div>
+                        <div class = "program-stack-item-content">
+                            <h3>Free School Supplies</h3>
+                            <p>Provide essential items teacher and students need to succeeded.</p>
+                        </div>
+                    </div>
+                
+                    <div class = "program-stack-item second-step">
+                        <div class = "program-stack-item-image">
+                            <%= image_tag 'book-svgrepo-com.svg', alt: 'Empower Educators', class: 'program-stack-item-image-icon' %>
+                        </div>
+                        <div class = "program-stack-item-content">
+                            <h3>Empower Educators</h3>
+                            <p>Support teachers with the tools and resources they deserve.</p>
+                        </div>
+                    </div>
+            
+                    <div class = "program-stack-item third-step">
+                        <div class = "program-stack-item-image">
+                                <%= image_tag 'community.svg', alt: 'Community', class: 'program-stack-item-image-icon' %>
+                            
+                        </div>
+                        <div class = "program-stack-item-content">
+                            <h3>Strengthen Communities</h3>
+                            <p>Invest in their education, inspire their potential, and build brightener futures.</p>
+                        </div>
+                    </div>
+                    
+
+                    <div class = "program-stack-item forth-step">
+                        <div class = "program-stack-item-image">
+                            <%= image_tag 'difference.svg', alt: 'Make a Difference', class: 'program-stack-item-image-icon' %>
+                        </div>
+                        <div class = "program-stack-item-content">
+                            <h3>Make a Difference </h3>
+                            <p>Your donation has a lasting impact year-round.</p>
+                        </div>
+                    </div>
+                    
+            </div>
+            <button class = "button hero-button"> Donate Now </button>
+        </div>
+
+
+
+
+
+<style>
+
+.program-section{
+    width: 100%;
+    background: #F2D04E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.program-title{
+    margin-bottom: 60px;
+}
+.program-title h1{
+    font-family: 'Lilita One',sans-serif;
+    font-weight: 800;
+    font-size: 80px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.program-title h1 .title-text-top{
+    text-align: left;
+}
+.program-title h1 .title-text-bottom{
+    margin-top: -20px;
+    text-align: right;
+    margin-left: 200px;
+    color: #24221B
+}
+.program-stack{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    color: #24221B;
+    margin-bottom: 40px;
+}
+.program-stack-item{
+    width: 706px;
+    height: 260px;
+    padding: 40px;
+    background: #F5E8B6;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.program-stack-item-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100%;
+}
+.program-stack-item-image-icon{
+    width: 100px;
+    height: 100px;
+    border-radius: 12px;
+}
+
+
+.program-stack-item-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: flex-start;
+    width: auto;
+    gap: 12px;
+
+}
+
+.program-stack-item-content h3{
+    font-family: 'Lilita One',sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+}
+.program-stack-item p{
+    font-size: 28px;
+    font-weight: 600;
+}
+
+.first-step{
+    border-radius: 36px 100px 0px;
+}
+
+.second-step{
+    border-radius: 100px 36px 100px 0px;
+}
+
+.third-step{
+    border-radius: 100px 0px 100px 36px;
+}
+
+.forth-step{
+    border-radius: 0px 100px 36px 100px;
+}
+
+
+</style>
