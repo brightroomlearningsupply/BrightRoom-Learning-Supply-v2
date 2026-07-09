@@ -9,6 +9,7 @@
                     <div class = "program-stack-item first-step">
                         <div class = "program-stack-item-image">
                             <%= image_tag 'backpack-svgrepo-com.svg', alt: 'Free School Supplies', class: 'program-stack-item-image-icon' %>
+                            <h3>Free School Supplies</h3>
                         </div>
                         <div class = "program-stack-item-content">
                             <h3>Free School Supplies</h3>
@@ -19,6 +20,7 @@
                     <div class = "program-stack-item second-step">
                         <div class = "program-stack-item-image">
                             <%= image_tag 'book-svgrepo-com.svg', alt: 'Empower Educators', class: 'program-stack-item-image-icon' %>
+                            <h3>Empower Educators</h3>
                         </div>
                         <div class = "program-stack-item-content">
                             <h3>Empower Educators</h3>
@@ -29,6 +31,7 @@
                     <div class = "program-stack-item third-step">
                         <div class = "program-stack-item-image">
                                 <%= image_tag 'community.svg', alt: 'Community', class: 'program-stack-item-image-icon' %>
+                                <h3>Strengthen Communities</h3>
                             
                         </div>
                         <div class = "program-stack-item-content">
@@ -41,6 +44,7 @@
                     <div class = "program-stack-item forth-step">
                         <div class = "program-stack-item-image">
                             <%= image_tag 'difference.svg', alt: 'Make a Difference', class: 'program-stack-item-image-icon' %>
+                            <h3>Make a Difference </h3>
                         </div>
                         <div class = "program-stack-item-content">
                             <h3>Make a Difference </h3>
@@ -58,15 +62,7 @@
 
 <style>
 
-.program-section{
-    width: 90%;
-    background: #F2D04E;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
+
 
 .program-title{
     margin-bottom: 60px;
@@ -112,6 +108,10 @@
     width: 100px;
     height: 100%;
 }
+
+.program-stack-item-image h3{
+    display: none;
+}
 .program-stack-item-image-icon{
     width: 100px;
     height: 100px;
@@ -155,5 +155,50 @@
     border-radius: 0px 100px 36px 100px;
 }
 
+@media(max-width: 600px){
+    .title-text-top, .title-text-bottom{
+        font-size: 40px;
+    }
+    .program-stack{
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .program-stack-item{
+        width: 100%;
+        height: auto;
+        padding: 50px 30px;
+        flex-direction: column;
+    }
+    .program-stack-item-image h3{
+        display: block;
+        font-size: 28px;
+    }
+    .program-stack-item-image{
+        width: 100%;
+        height: auto;
+        gap: 20px;
+    }
+    .program-stack-item-content{
+        width: 100%;
+    }
 
+    .program-stack-item-content h3{
+        display: none;
+    }
+
+    .program-title h1{
+    font-family: 'Lilita One',sans-serif;
+    font-weight: 800;
+    font-size: 80px;
+    width: 100%;
+}
+.program-title h1 .title-text-top{
+  
+}
+.program-title h1 .title-text-bottom{
+    margin-left: 0;
+    text-align: left;
+    color: #24221B
+}
+}
 </style>

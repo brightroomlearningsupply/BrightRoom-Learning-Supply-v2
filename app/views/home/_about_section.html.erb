@@ -17,7 +17,10 @@
 
 
 <style>
+.about{
+    font-size: clamp(48px, 5vw, 60px);
 
+}
 .about-content{
     padding: 40px;
     display: flex;
@@ -52,6 +55,34 @@
     font-weight: 600;
     font-size: 30px;
     color: #24221B;
+}
+@media(max-width: 600px){
+    .about{
+        margin-bottom: 20px;
+    }
+.about-content{
+    flex-direction: column;
+    padding: 0;
+    gap: 40px;
+}   
+
+.about-image-container{
+    width: 100%;
+}
+.about-image{
+    width: 100%;
+    height: 460px;
+}
+
+.about-text{
+    width: 100%;
+    padding: 0;
+}
+
+.about-text p{
+    font-size: 24px;
+}
+
 }
 
 </style>
