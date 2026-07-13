@@ -8,48 +8,45 @@
             </div>
 
             <div class = "right-hand-side">
-                <div class = "hero-image image-one"> </div>
-                <div class = "hero-image image-two"> </div>
-                <div class = "hero-image image-three"> </div>
+                <%= image_tag "heroImageOne.png", class: "hero-image image-one" %>
+                <div class = "group">
+                    <%= image_tag "heroImageTwo.png", class: "hero-image image-two" %>
+                   <%= image_tag "heroImageThree.png", class: "hero-image image-three" %>
+                </div>
             </div>
         </div>
 
 
 <style>
 
-
-
-.hero-banner{
-    display: flex;
+.group{
+    display:flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    width: 100%;
-}
+    gap: 40px;
 
+}
 .left-hand-side{
     flex: 1;
     padding: 20px;
-    height: 100%;
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
 
 }
  
 .right-hand-side{
     flex: 1;
-    height: 100%;
-    position: relative;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
 }
 
 .title{
     font-family: 'Lilita One',sans-serif;
     font-weight: 800;
-    font-size: 60px;
-
+    font-size: clamp(48px, 5vw, 60px);
     text-align: left;
     margin-bottom: 100px;
 }
@@ -85,12 +82,12 @@ button:hover{
     height: 262px;
     background: blue;
     border-radius: 24px;
+    object-fit: cover;
 }
 
 .image-one{
     background: purple;
-    margin-top: 140px;
-    margin-left: 200px;
+    align-self:center;
 }
 
 .image-two{
@@ -104,42 +101,33 @@ button:hover{
     width: 262px;
     height: 315px;
     
-    margin-top: -300px;
-    margin-left: 420px;
     background: red;
 }
 
-@media (max-width: 1666px) {
-    .image-two{
-        width: 316px;
-        height: 250px;
-    }
 
-
-    .image-three {
-        
-        margin-top: -240px;
-        margin-left: 420px;
-    }
+.hero-banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    height: 80vh;
 }
-
-@media(max-width: 1550px) {
-    
-    .image-three {
-        margin-top: -200px;
-        margin-left: 340px;
-    }
-}
-
 
 
 @media(max-width: 1366px) {
     .hero-banner{
         flex-direction: column;
         height: auto;
+        width:90%;
+        
     }
     .hero{
         margin-bottom: 40px;
+    }
+
+    .left-hand-side{
+
     }
     .right-hand-side{
         width: 100%;
@@ -149,35 +137,50 @@ button:hover{
     }
 
     .image-one{
-        margin-top: 0px;
-        margin-left: 400px;
-        margin-right: 0px;
+    }
+
+    .group{
+        justify-content: center;
     }
      .image-two{
         
     width: 374px;
     height: 326px;
-        margin-top: 40px;
-        margin-left: 40px;
     }
      .image-three{
             
-        margin-top: -280px;
-        margin-left: 600px;
     }
 }
 
-@media(max-width: 600px){
-    .image-one{
-        margin-left: 10px;
+@media(max-width: 800px){
+    .left-hand-side{
+        padding: 0;
     }
 
-       .image-two{
-        
-        width: 374px;
-        height: 326px;
-        margin-top: 20px;
+    .right-hand-side{
+        gap: 0;
+        padding: 0;
+        justify-content: flex-start;
+    }
+    .group{
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+    .image-one{
+        margin-left: 0;
+    
+    }
+
+    .image-three{
+        display:none;
+    }
+    .image-two{
+        align-self: right;
+        width: 80%;    
+        margin-top: 10px;
         margin-left: 20px;
     }
+
+    
 }
 </style>
