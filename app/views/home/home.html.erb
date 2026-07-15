@@ -23,20 +23,27 @@
     </section>
 
     <footer>
-        <div class = "footer-top">
-            <%= image_tag "logo.svg", class: "footer-logo" %>
-            <h3> BrightRoom <br>Learning Supplies</h3>
-        </div>
+        <%= link_to root_path, class: "footer-logo-link" do %>
+  <div class="footer-top">
+    <%= image_tag "logo.svg", class: "footer-logo", alt: "BrightRoom Learning Supplies" %>
+    <h3>BrightRoom <br>Learning Supplies</h3>
+  </div>
+<% end %>
 
         <div class = "footer-middle">
-            <div class = "dropoff-locations">
+            <div class="dropoff-locations">
                 <%= image_tag "location.svg", class: "location-icon" %>
-                <div  style="display:flex; flex-direction: column;gap:10px;">
+
+                <div style="display: flex; flex-direction: column; gap: 10px;">
                     <h3>MAIL DONATIONS TO</h3>
-                    
-                    <p> 6025 Stage Road Ste 42 #153, Bartlett, TN 38134 </p>
+                    <p>6025 Stage Road Ste 42 #153, Bartlett, TN 38134</p>
                 </div>
-                <%= image_tag "brightroom-map.png", class: "map-image" %>
+
+                <%= link_to @location, target: "_blank", rel: "noopener noreferrer" do %>
+                    <%= image_tag "brightroom-map.png",
+                                class: "map-image",
+                                alt: "View mailing address on Google Maps" %>
+                <% end %>
             </div>
 
             <div class = "contact">
@@ -44,14 +51,18 @@
                 <div style="display:flex; flex-direction: column;gap:10px;">
                     <h3> QUESTIONS? </h3>
                     <p> Email any time at:</p>
-                    <p style="font-weight: 200;"> brightroomlearningsupply@gmail.com </p>
+                    <p style="font-weight: 200;">
+  <%= mail_to "brightroomlearningsupply@gmail.com",
+              "brightroomlearningsupply@gmail.com",
+              class: "email-link" %>
+</p>
                 </div>
             </div>
                 
         </div>
 
         <div class = "footer-bottom">
-                <p> Bright Room Learning Supplies2026 </p>
+                <p> @2025 BrightRoom Learning Supply. All rights reserved. </p>
         </div>
     </footer>
 </div>
@@ -145,6 +156,17 @@ footer{
     margin-left: 20px;
 }
 
+.footer-logo-link {
+    width: 100%;
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer-logo-link .footer-top {
+  cursor: pointer;
+}
+
 /******************************************/
 .footer-middle{
     width: 100%;
@@ -183,19 +205,43 @@ footer{
     font-size: 18px;
 }
 
-.map-image{
-   height: 100%;
-   
-   width: 200px; 
-   object-fit: cover;
-   border-radius: 24px;
+.map-image {
+  height: 100%;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 24px;
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out,
+    filter 0.3s ease-in-out;
 }
+
+.map-image:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.5),
+    0 6px 14px rgba(0, 0, 0, 0.15);
+  filter: brightness(1.04);
+}
+
+.email-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+}
+
 .footer-bottom{
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 20px;
+    font-family: "Kanchenjunga", sans-serif;
 }
 
 @media (max-width: 600px) {
