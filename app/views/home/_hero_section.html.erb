@@ -4,7 +4,11 @@
 
                 <div class = "hero-text">BrightRoom Learning Supply provides school supplies, books, and resources to students and teachers in need. Providing support and brightening futures one classroom at a time. </div>
             
-                <button class = "button hero-button"> Donate Now </button>
+                <%= button_to "Donate Now",
+      @donation,
+      method: :get,
+      class: "button hero-button",
+      form: { target: "_blank" } %>
             </div>
 
             <div class = "right-hand-side">
