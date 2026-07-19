@@ -36,10 +36,10 @@
 
                 <div style="display: flex; flex-direction: column; gap: 10px;">
                     <h3>MAIL DONATIONS TO</h3>
-                    <p>6025 Stage Road Ste 42 #153, Bartlett, TN 38134</p>
+                    <p>6025 Stage Road Ste 42 PMB 153, Bartlett, TN 38134</p>
                 </div>
 
-                <%= link_to @location, target: "_blank", rel: "noopener noreferrer" do %>
+                <%= link_to @location, target: "_blank", rel: "noopener noreferrer", class: "map_link" do %>
                     <%= image_tag "brightroom-map.png",
                                 class: "map-image",
                                 alt: "View mailing address on Google Maps" %>
@@ -51,11 +51,9 @@
                 <div style="display:flex; flex-direction: column;gap:10px;">
                     <h3> QUESTIONS? </h3>
                     <p> Email any time at:</p>
-                    <p style="font-weight: 200;">
-  <%= mail_to "brightroomlearningsupply@gmail.com",
-              "brightroomlearningsupply@gmail.com",
-              class: "email-link" %>
-</p>
+                    <p style="font-weight: 200;"> <%= mail_to "brightroomlearningsupply@gmail.com", "brightroomlearningsupply@gmail.com", class: "email-link" %> </p>
+                    <p>or call:</p>
+                    <p><%= phone_to "(901) 330-0169" , class: "email-link"%></p>
                 </div>
             </div>
                 
@@ -240,6 +238,8 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
     padding-top: 20px;
     font-family: "Kanchenjunga", sans-serif;
 }
@@ -269,6 +269,7 @@ footer{
     }
 
     .footer-bottom{
+
         font-size: 20px;
     }
 
@@ -282,6 +283,14 @@ footer{
     width: 100%;
     height: 80px;
     border-radius: 12px;
+}
+
+.map_link{
+    width: 100%;
+}
+
+.email-link{
+    text-decoration: underline;
 }
 
 }
