@@ -1,6 +1,6 @@
 <div class = "page">
 
-    <section class = "section">
+    <section class = "section" style = "">
         <div class="nav" >
             
             <%= image_tag "logo.svg", class: "footer-logo" %>
@@ -14,15 +14,87 @@
         <%= render "hero_section" %>
     </section>
 
-    <section class = "section" style = "background: #F2D04E;">
+    <section class="section section-yellow">
+        <svg
+        class="section-wave section-wave-desktop"
+        viewBox="0 0 1512 69"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        >
+        <path
+            d="M0 41.4767C0 41.4767 219.5 60.7573 767.5 15.1465C1315.5 -30.4643 1512 41.4767 1512 41.4767V69H0V41.4767Z"
+            fill="currentColor"
+        />
+        </svg>
+
+        <svg
+        class="section-wave section-wave-mobile"
+        viewBox="0 0 400 30"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        >
+        <path
+            d="M0 17 C100 24, 290 7, 400 17 V30 H0 Z"
+            fill="currentColor"
+        />
+        </svg>
+
         <%= render "process_section" %>
+    
     </section>
 
-    <section class = "section" style = "background: #E9BE5F;">
+    <section class = "section section-brown" style = "background: #E9BE5F;">
+          <svg
+        class="section-wave section-wave-desktop"
+        viewBox="0 0 1512 69"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        >
+        <path
+            d="M0 41.4767C0 41.4767 219.5 60.7573 767.5 15.1465C1315.5 -30.4643 1512 41.4767 1512 41.4767V69H0V41.4767Z"
+            fill="currentColor"
+        />
+        </svg>
+
+        <svg
+        class="section-wave section-wave-mobile"
+        viewBox="0 0 400 30"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        >
+        <path
+            d="M0 17 C100 24, 290 7, 400 17 V30 H0 Z"
+            fill="currentColor"
+        />
+        </svg>
         <%= render "about_section" %>
     </section>
 
-    <footer>
+    <footer class = "section-black">
+         <svg
+        class="section-wave section-wave-desktop"
+        viewBox="0 0 1512 69"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        >
+        <path
+            d="M0 41.4767C0 41.4767 219.5 60.7573 767.5 15.1465C1315.5 -30.4643 1512 41.4767 1512 41.4767V69H0V41.4767Z"
+            fill="currentColor"
+        />
+        </svg>
+
+        <svg
+        class="section-wave section-wave-mobile"
+        viewBox="0 0 400 30"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+        >
+        <path
+            d="M0 17 C100 24, 290 7, 400 17 V30 H0 Z"
+            fill="currentColor"
+        />
+        </svg>
+
         <%= link_to root_path, class: "footer-logo-link" do %>
   <div class="footer-top">
     <%= image_tag "logo.svg", class: "footer-logo", alt: "BrightRoom Learning Supplies" %>
@@ -52,8 +124,8 @@
                     <h3> QUESTIONS? </h3>
                     <p> Email any time at:</p>
                     <p style="font-weight: 200;"> <%= mail_to "brightroomlearningsupply@gmail.com", "brightroomlearningsupply@gmail.com", class: "email-link" %> </p>
-                    <p>or call:</p>
-                    <p><%= phone_to "(901) 330-0169" , class: "email-link"%></p>
+                    <%# <p>or call:</p>
+                    <p><%= phone_to "(901) 330-0169" , class: "email-link" %>
                 </div>
             </div>
                 
@@ -124,6 +196,7 @@
 /******************************************/
 
 footer{
+     position: relative;
     color: white;
     gap: 20px;
     width: 100%;
@@ -136,6 +209,7 @@ footer{
 
 
 .footer-top{
+    color:white;
     width: 100%;
     display: flex;
     align-items: center;
@@ -167,6 +241,7 @@ footer{
 
 /******************************************/
 .footer-middle{
+    color:white;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -234,6 +309,7 @@ footer{
 }
 
 .footer-bottom{
+    color:white;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -305,4 +381,62 @@ footer{
     .nav{
         width: 90%;
     }}
+
+
+
+
+    .section {
+  position: relative;
+  padding: 0 80px ;
+}
+
+.section-yellow {
+  background-color: #f2d04e;
+  color: #f2d04e;
+  padding-bottom: 6rem;
+}
+
+.section-brown {
+  background-color: #e9be5f;
+  color: #e9be5f;
+}
+
+.section-black {
+  color: black;
+  background-color: black;
+}
+
+.section-wave {
+  position: absolute;
+  top: -68px;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 69px;
+  pointer-events: none;
+}
+
+/* Prevent the inherited wave color from changing the text */
+
+
+.section-wave-mobile {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .section-wave-desktop {
+    display: none;
+  }
+
+  .section-wave-mobile {
+    display: block;
+    height: 40px;
+    top: -39px;
+  }
+  
+    .section {
+  position: relative;
+  padding: 0 10px ;}
+
+}
 </style>
