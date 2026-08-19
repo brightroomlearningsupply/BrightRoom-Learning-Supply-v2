@@ -1,9 +1,9 @@
 <div class = "page">
 
-    <section class = "section" style = "">
+    <section class = "section nav-hero">
         <div class="nav" >
             
-            <%= image_tag "BrightRoomDarkModeLogo.svg", class: "footer-logo" %>
+            <%= image_tag "brightroomNewLightLogo.svg", class: "footer-logo" %>
             <h3 style = "font-family: 'Lilia One',sans-serif;
                 font-weight: 800; align-self:center; margin-left: 20px;">
                 BrightRoom <br>
@@ -14,7 +14,7 @@
         <%= render "hero_section" %>
     </section>
 
-    <section class="section section-yellow">
+    <section class="section section-light-blue">
         <svg
         class="section-wave section-wave-desktop"
         viewBox="0 0 1512 69"
@@ -43,7 +43,7 @@
     
     </section>
 
-    <section class = "section section-brown" style = "background: #E9BE5F;">
+    <section class = "section section-cream" style = "background: #FEFFEA;">
           <svg
         class="section-wave section-wave-desktop"
         viewBox="0 0 1512 69"
@@ -97,7 +97,7 @@
 
         <%= link_to root_path, class: "footer-logo-link" do %>
   <div class="footer-top">
-    <%= image_tag "BrightRoomDarkModeLogo.svg", class: "footer-logo", alt: "BrightRoom Learning Supplies" %>
+    <%= image_tag "brightroomNewDarkLogo.svg", class: "footer-logo", alt: "BrightRoom Learning Supplies" %>
     <h3>BrightRoom <br>Learning Supplies</h3>
   </div>
 <% end %>
@@ -145,7 +145,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
+    color:  #24221B;
     overflow-x:hidden;
 }
 
@@ -161,14 +161,18 @@
 .section-content{
     
     max-width: 1780px;
-    min-height: 1000px;
     padding: 40px 0;
+}
+
+.nav-hero{
+    height: 95vh;
 }
 
 
 .program-section{
+  
     width: 90%;
-    background: #F2D04E;
+    background: #93A9E2;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -177,6 +181,7 @@
 }
 .about-section{
     width: 90%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -197,6 +202,7 @@
 
 footer{
      position: relative;
+     
     color: white;
     gap: 20px;
     width: 100%;
@@ -254,7 +260,7 @@ footer{
 }
 
 .footer-middle h3{
-    font-weight: 800;
+    font-weight: 500;
     font-size: 24px;
 }
 
@@ -269,12 +275,12 @@ footer{
     font-family: 'Lilita One',sans-serif;
 }
 .dropoff-locations{
-    border-right: 2px solid #F2D04E;
+    border-right: 2px solid #F0C808;
 }
 
 .footer-middle p{
     
-    font-weight: 600;
+    font-weight: 400;
     font-size: 18px;
 }
 
@@ -390,20 +396,22 @@ footer{
   padding: 0 80px ;
 }
 
-.section-yellow {
-  background-color: #f2d04e;
-  color: #f2d04e;
+.section-light-blue {
+    
+  background-color: #93A9E2;
+  color: #93A9E2;
   padding-bottom: 6rem;
 }
 
-.section-brown {
-  background-color: #e9be5f;
-  color: #e9be5f;
+.section-cream {
+  background-color: #FEFFEA;
+  color: #FEFFEA;
 }
 
 .section-black {
-  color: black;
-  background-color: black;
+  color: #184981;
+  background-color:#184981;
+  width: 100%;
 }
 
 .section-wave {
@@ -439,4 +447,7 @@ footer{
   padding: 0 10px ;}
 
 }
+.nav-hero{
+    height: auto;
+    }
 </style>

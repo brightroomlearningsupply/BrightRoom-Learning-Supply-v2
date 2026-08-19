@@ -14,7 +14,8 @@
 }
 body{
     scrollbar-width: none;
-    background: #24221B;
+    background: #FEFFEA;
+    width: 100vw;
     overflow-x:hidden;
 }
 *, *::before, *::after {
